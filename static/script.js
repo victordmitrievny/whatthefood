@@ -14,6 +14,7 @@ document.getElementById('file-input').addEventListener('change', function(event)
     const imageContainer = document.getElementById('image-container');
     const fileInput = event.target;
     
+    // Print photo on the page
     if (fileInput.files && fileInput.files[0]) {
         const reader = new FileReader();
 
