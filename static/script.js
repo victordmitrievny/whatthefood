@@ -1,26 +1,42 @@
 
 
 // This code finds hello container and puts helo world in there
-const helloText = document.createTextNode("Hello, World!");
-const findDiv = document.getElementById("hello-container");
-findDiv.appendChild(helloText);
+// const helloText = document.createTextNode("Hello, World!");
+// const findDiv = document.getElementById("hello-container");
+// findDiv.appendChild(helloText);
 
-// This code creates an image container
+// This code finds an image container and loading screen
+
+
 const Image = document.getElementById("image-container");
-Image.src = "/Users/victordmitirev/Desktop/Screen Shot 2023-09-17 at 1.55.31 AM.png";
+const loadingScreen = document.getElementById("loading-screen");
+const Welcome = document.getElementById("welcome");
+const Description = document.getElementById("description");
+const UploadString = document.getElementById("upload-string");
+const Ellipse1 = document.getElementById("ellipse1");
+const Ellipse2 = document.getElementById("ellipse2");
+
+
 
 // This is codes retrieves uploaded file and puts it into image container and sends to server (BUT I DONT UNDERSTAND IT)
 document.getElementById('file-input').addEventListener('change', function(event) {
     const imageContainer = document.getElementById('image-container');
     const fileInput = event.target;
-    
-    // Print photo on the page
+
+
+   // If not empty file uploaded
     if (fileInput.files && fileInput.files[0]) {
         const reader = new FileReader();
 
+         // Print photo on the page
         reader.onload = function(e) {
             imageContainer.src = e.target.result;
         };
+
+
+        loadingScreen.style.display = "flex";
+
+
 
         // New code to send the file to the Python file
         const formData = new FormData();
@@ -28,10 +44,34 @@ document.getElementById('file-input').addEventListener('change', function(event)
         fetch('/uploadimage', {
             method: 'POST',
             body: formData
-        }).then(response => {
-            // Handle the response from the server if needed
-        });
+        })
+        .then(response => response.text()) // Uses response.text() for plain text
+        .then(data => {
+            // Handles the response from the server here
+    
+            // Example: Update a <p> element with the received text
+            const generatedTextElement = document.getElementById('generatedText');
+            generatedTextElement.innerHTML = data;
 
-        reader.readAsDataURL(fileInput.files[0]);
+            // Update HTML layout and elements
+            loadingScreen.style.display = "none";
+            Welcome.style.display = "none";
+            Description.style.display = "none";
+            UploadString.style.display = "none";
+            Ellipse1.style.display = "none";
+            Ellipse2.style.display = "block";
+            
+
+        })
+        .catch(error => {
+            // Handles any errors that may occur during the fetch request
+        })
+
+
+        //I believe this code used to showing uploaded picture on the front end
+        //reader.readAsDataURL(fileInput.files[0]);
+
+        
+
     }
     });

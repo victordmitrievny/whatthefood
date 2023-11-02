@@ -1,24 +1,130 @@
 <!DOCTYPE html>
+
 <head>
     <title>WhatTheFood</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
 </head>
 
 <body>
-    <h1 class="center-text">Welcome to the WhatTheFood app!</h1>
-    <p class="center-text">It is designed to help you better understand the composition of your food and its implications</p>
-    <p class="center-text">Please upload the product contents below </p>
 
-    <form class="center-text" id="upload-form" enctype="multipart/form-data">
-        <input type="file" id="file-input" accept=".jpg, .jpeg, .png">
+    <div class = "head-page-container">
+        <div class = "left">
+            WHAT THE FOOD
+        </div>
+
+
+        <div class = "right-container">
+
+            <div class = "download-sample-button">
+                <a href="../static/images/test_picture.png" 
+                   download="image.jpg" 
+                   target="_blank"
+                   style="color: black; text-decoration: none" 
+                   onmouseover="this.style.color='#C64C4C'"
+                   onmouseout="this.style.color='black'">
+                    Download Sample Picture
+                </a>
+            </div>
+
+            <div class = "methodology">
+                <a href="https://docs.google.com/document/d/15HFavJTw5Rpwiay0EWEIR0DOi3K_kDijyvmgaChPOpo/edit?usp=sharing" 
+                   target="_blank"
+                   style="color: black; text-decoration: none"
+                   onmouseover="this.style.color='#C64C4C'"
+                   onmouseout="this.style.color='black'">
+                    Product Demo
+                </a>
+            </div>
+
+            <div class = "methodology">
+                <a href="https://docs.google.com/document/d/15HFavJTw5Rpwiay0EWEIR0DOi3K_kDijyvmgaChPOpo/edit?usp=sharing" 
+                   target="_blank"
+                   style="color: black; text-decoration: none"
+                   onmouseover="this.style.color='#C64C4C'"
+                   onmouseout="this.style.color='black'">
+                    Methodology
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div id= "welcome" class="welcome-container">
+        <h1>Welcome!</h1>
+    </div>
+
+
+    <div id = "description" class="description-container">
+        <p>
+            <span style="color: #C64C4C; font-size: 25px;">WhatTheFood</span>
+            <span style="color: #475549; font-size: 20px;">IS DESIGNED TO HELP YOU BETTER UNDERSTAND THE</span>
+            <span style="color: #C64C4C; font-size: 20px;">COMPOSITION OF YOUR FOOD AND ITS IMPLICATIONS</span> 
+        </p>
+    </div>
+
+    <div id = "upload-string" class="center-container">
+        <p>PLEASE UPLOAD YOUR PRODUCT INGREDIENTS BELOW: </p>
+    </div>
+
+    <!-- form and label for the form in HTML --> 
+    <form class="center-container" id="upload-form" enctype="multipart/form-data">
+        <input type="file" id="file-input" accept=".jpg, .jpeg, .png" style = "display:none">
     </form>
 
-    <img id="image-container" alt="Image">
+    <div id = "ellipse1" class = "ellipsediv">
 
-    <div id="hello-container"></div>
+        <label for="file-input" 
+               class="form-label-input"
+               onmouseover="this.style.color='#C64C4C'"
+               onmouseout="this.style.color='#475549'">
+            <span>choose file</span>
+        </label>
+
+        <img src="../static/images/ellipse.png" class = "ellipse" alt="thisellipse">
+    </div>
+
+    
+    <div id = "loading-screen" class="hidden">
+        <p>...Loading...</p>
+    </div>
+
+
+    <p id="generatedText">{{ text }}</p>
+
+    <!--
+    <img id="image-container" alt="Image">
+        -->
+    
+    <!--This is a new upload button generated below the table after the script is complete-->
+    <div id = "ellipse2" class = "ellipsediv">
+        <label for="file-input" 
+                class="form-label-input2"
+                onmouseover="this.style.color='#C64C4C'"
+                onmouseout="this.style.color='#475549'">
+            <span>choose new file?</span>
+        </label>
+        <img src="../static/images/ellipse.png" class = "ellipse" alt="thisellipse">
+    </div>
 
     <script src="../static/script.js"></script>
 
 </body>
 
 
+<!--    
+TABLE HTML FORMAT FOR REFERENCE
+
+    <div class = "output-div">
+        <div class = "table-row">
+            <div class="table-cell">Cell 1</div>
+            <div class="table-cell">Cell 2</div>
+            <div class="table-cell">Cell 3</div>
+        </div>
+        <div class ="table-row">
+            <div class="table-cell">Cell 1</div>
+            <div class="table-cell">Cell 2</div>
+            <div class="table-cell">Cell 3</div>
+        </div>
+    </div> 
+--> 
