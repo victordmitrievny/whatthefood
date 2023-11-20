@@ -5,7 +5,20 @@
     <link rel="stylesheet" type="text/css" href="../static/styles.css">
 </head>
 
-<body>
+<body id = "body">
+
+
+    <div id = "loading-screen0" class='container'>
+        <div class='loader'>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--dot'></div>
+          <div class='loader--text'></div>
+        </div>
+      </div>      
 
     <div class = "head-page-container">
         <div class = "left">
@@ -32,7 +45,7 @@
                    style="color: black; text-decoration: none"
                    onmouseover="this.style.color='#C64C4C'"
                    onmouseout="this.style.color='black'">
-                    Product Demo
+                    Watch Product Demo
                 </a>
             </div>
 
@@ -84,11 +97,6 @@
         <img src="../static/images/ellipse.png" class = "ellipse" alt="thisellipse">
     </div>
 
-    
-    <div id = "loading-screen" class="hidden">
-        <p>...Loading...</p>
-    </div>
-
 
     <p id="generatedText">{{ text }}</p>
 
@@ -107,9 +115,51 @@
         <img src="../static/images/ellipse.png" class = "ellipse" alt="thisellipse">
     </div>
 
+
+    <!--
+    <div id = "loading-screen1" class="hidden">
+        <p>...Loading...</p>
+    </div>
+-->
+
+    <div id = "loading-screen1" class="data-loader">
+        
+    </div>
+
+
+
+<!--
+    <div id = "pre-citation-div">
+
+    </div>
+-->
+
+    <div id = "citation-div">
+        <p id = "citation-p">
+                The database of compounds and effects is based on the 
+            <a href = "https://agri.najah.edu/media/filer_public/6e/ea/6eea1877-67b8-4687-870e-5545ea6da141/guide_to_food_additives_-_e-numbers.pdf"
+            style= "color: #000000"
+            onmouseover="this.style.color='#C64C4C'"
+            onmouseout="this.style.color='#000000'">
+                list</a> 
+                published by the Faculty of Agriculture and Veterinary Medicine of 
+            <a href = "https://agri.najah.edu/en/"
+            style= "color: #000000" 
+            onmouseover="this.style.color='#C64C4C'"
+            onmouseout="this.style.color='#000000'"> 
+                An-Najah National University </a>
+        </p>
+    </div>
+
+
+
+
     <script src="../static/script.js"></script>
 
 </body>
+
+
+
 
 
 <!--    
