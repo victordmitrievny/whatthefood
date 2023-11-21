@@ -107,9 +107,21 @@ def upload_file():
 
 
 
-            #Create a dynamic HTML table for the contents
+            #-------------------Render a dynamic HTML table for the contents
             table = """<div class ="output-div">
-                        <div class ="inner-output-div">"""
+                        <div class ="inner-output-div">
+                            <div class = table-row>
+                                <div class = table-cell> NAME:       </div>
+                                <div class = table-cell> CATEGORY:   </div>
+                                <div class = table-cell> EFFECT:     </div>
+                            </div>
+                            <div class = table-row>
+                                <div class = table-cell>  &nbsp       </div>
+                                <div class = table-cell>              </div>
+                                <div class = table-cell>              </div>
+                            </div>
+                        
+                        """
             sus_presence = False
             for element in dlist:
                 if element['effect'] in "Suspicious ":
