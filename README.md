@@ -41,7 +41,7 @@ _**Methodology Breakdown:**_
 1. The program starts with Python server launch
 2. Using HTML and CSS, the program generates basic page layout, its elements, text and the upload button
 3. Javascript listens to the image-upload event and passes it to the backend
-4. Using Python, the program recieves the picture on the back-end
+4. Using Python, the program receives the picture on the back-end
 5. Using Tesseract OCR, given the image is in the right format, the program converts the image to a text string
 6. The program then formats the text string to make ingredients identification process easier
 7. The program then identifies each ingredient by splitting the formatted text string by commas (",") and writes each ingredient in a list of dictionaries
