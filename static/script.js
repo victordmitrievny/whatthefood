@@ -20,11 +20,15 @@ const Precitationdiv = document.getElementById("pre-citation-div");
 const CitationDiv = document.getElementById("citation-div");
 const CitationP = document.getElementById("citation-p");
 
+
 //This code listens for the page to load in order to hide pageloader
 window.addEventListener("load", function () {
     // Hide the loader when the page has finished loading
     Pageloader.style.display = "none";
   });
+
+
+//------------------Main Code-----------
 
 
 // This is codes retrieves uploaded file and puts it into image container and sends to server (BUT I DONT UNDERSTAND IT)
