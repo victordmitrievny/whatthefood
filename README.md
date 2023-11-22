@@ -11,7 +11,7 @@ the app analazyes it and suggests wether this product contains potentially dange
 This way people, can eliminate harmful products from their diet and eat more healthy
 
 
-This is a full-stack web app. Front-end is written in HTML, CSS and JavaScript; backend is written in Python, is attached to an SQL database, and uses Tesseract OCR for picture
+This is a full-stack web app. Front-end is written in HTML, CSS and JavaScript; backend is written in Python, is attached to a SQL database, and uses Tesseract OCR for picture
 processing. Some of the main libraries used are: <br>
 -Pandas <br>
 -Sqlalchemy <br>
