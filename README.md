@@ -51,7 +51,7 @@ _**Methodology Breakdown:**_
 11. The program passes the resulting HTML table back to Javascript on the front-end
 12. Javascript generates the table passed from the back-end and updates the overall HTML layout and CSS styles
 
-13.* The program then is deployed on Heroku, alongside the SQL database I've created for this project
+13.* The program is then deployed on Heroku, alongside the SQL database created for this project
    
 
 
